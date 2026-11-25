@@ -48,6 +48,15 @@ Add this to your agent instructions:
 
 [Beating](https://heart.zcurv.com) is the directory of projects that carry a `heart.lock`. To get listed, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
+## Releasing
+
+1. Bump the version in `package.json`.
+2. Commit the change.
+3. Tag it: `git tag v<version>`.
+4. Push the tag: `git push origin v<version>`.
+
+The publish workflow runs on the tag, verifies the tag matches `package.json`, runs checks, and publishes to npm via trusted publishing (OIDC). If npm holds it as a staged publish, approve it on the package page.
+
 ## Format
 
 See [SPEC.md](./SPEC.md) for the full `heart.lock` format and [heart.schema.json](./heart.schema.json) for the JSON Schema.
