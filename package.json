@@ -7,7 +7,7 @@
     "heart": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node -e \"import{writeFileSync,chmodSync}from'node:fs';writeFileSync('dist/cli.js','#!/usr/bin/env node\\nimport \\\"./src/cli.js\\\";\\n');chmodSync('dist/cli.js',0o755)\"",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "typecheck": "tsc --noEmit"
   },
