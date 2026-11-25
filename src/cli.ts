@@ -3,6 +3,7 @@ import { runInit } from "./commands/init.js";
 import { runCheck } from "./commands/check.js";
 import { runFreeze } from "./commands/freeze.js";
 import { runCard } from "./commands/card.js";
+import { runDrift } from "./commands/drift.js";
 
 const USAGE = `Usage: heart <command> [options]
 
@@ -11,6 +12,7 @@ Commands:
   check [path]      Validate heart.lock (or a specific file)
   freeze            Append a new freeze to heart.lock
   card [--out dir]  Write heart-card.svg and heart-card.html
+  drift <path>      Check whether a file serves the frozen why (LLM)
 
 Options:
   -h, --help        Show this help
@@ -38,6 +40,8 @@ export async function main(argv: string[]): Promise<number> {
       return runFreeze(rest);
     case "card":
       return runCard(rest);
+    case "drift":
+      return runDrift(rest);
     default:
       process.stderr.write(`Unknown command: ${command}\n\n${USAGE}`);
       return 1;

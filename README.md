@@ -34,7 +34,7 @@ The `heart` CLI is a convenient way to work with `heart.lock`:
 - `heart check` - validate `heart.lock` against the spec.
 - `heart freeze` - append a new freeze (the only write path).
 - `heart card` - render the current heart as SVG/HTML.
-- `heart drift` - compare recent work against the frozen why. *(coming)*
+- `heart drift <path>` - ask an LLM whether a file serves the frozen why (BYOK: `HEART_LLM_API_KEY`, optional `HEART_LLM_BASE_URL`, `HEART_LLM_MODEL`).
 
 Install with npm if you want it: `npm install -g heartlock` (or run from this repo).
 

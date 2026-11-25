@@ -9,6 +9,15 @@ declare namespace NodeJS {
   }
 }
 
+declare function fetch(
+  input: string,
+  init?: {
+    method?: string;
+    headers?: Record<string, string>;
+    body?: string;
+  },
+): Promise<{ ok: boolean; status: number; text(): Promise<string>; json(): Promise<unknown> }>;
+
 declare var process: {
   argv: string[];
   cwd(): string;
