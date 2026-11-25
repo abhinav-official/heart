@@ -44,3 +44,33 @@ test("top-level why not matching last freeze fails with the right problem", () =
     `expected why-mismatch problem, got: ${problems.join("; ")}`,
   );
 });
+
+test("validator accepts a heart with and without the ai block", () => {
+  const base = loadFixture("valid.json") as Record<string, unknown>;
+  assert.deepEqual(validate(base), []);
+  const withAi = {
+    ...base,
+    ai: {
+      edit_permission: "denied",
+      reason: "Locked.",
+      instruction: "Read first.",
+    },
+  };
+  assert.deepEqual(validate(withAi), []);
+});
+
+test("an ai block with edit_permission set to anything else fails validation", () => {
+  const base = loadFixture("valid.json") as Record<string, unknown>;
+  const problems = validate({
+    ...base,
+    ai: {
+      edit_permission: "allowed",
+      reason: "Locked.",
+      instruction: "Read first.",
+    },
+  });
+  assert.ok(
+    problems.includes('ai.edit_permission must be "denied"'),
+    `expected ai.edit_permission problem, got: ${problems.join("; ")}`,
+  );
+});

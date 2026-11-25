@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { createPrompter, heartPath, writeHeartFile } from "../common.js";
+import { CANONICAL_AI, createPrompter, heartPath, writeHeartFile } from "../common.js";
 
 export async function runInit(_args: string[]): Promise<number> {
   const dir = process.cwd();
@@ -29,6 +29,7 @@ export async function runInit(_args: string[]): Promise<number> {
           note: "First freeze.",
         },
       ],
+      ai: CANONICAL_AI,
     };
 
     writeHeartFile(filePath, heart);

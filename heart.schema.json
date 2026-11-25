@@ -58,6 +58,31 @@
           }
         }
       }
+    },
+    "ai": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edit_permission", "reason", "instruction"],
+      "description": "Lock instruction for AI agents. No project meaning. Optional for validity; init always writes it.",
+      "properties": {
+        "edit_permission": {
+          "type": "string",
+          "enum": ["denied"],
+          "description": "Fixed text, not a setting: only valid value is denied."
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^\\n\\r]*$",
+          "description": "Why this file is locked."
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^\\n\\r]*$",
+          "description": "What AI agents should do before working."
+        }
+      }
     }
   }
 }

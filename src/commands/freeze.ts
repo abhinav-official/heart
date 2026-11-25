@@ -1,4 +1,4 @@
-import { createPrompter, heartPath, readHeartFile, writeHeartFile } from "../common.js";
+import { CANONICAL_AI, createPrompter, heartPath, readHeartFile, writeHeartFile } from "../common.js";
 
 export async function runFreeze(_args: string[]): Promise<number> {
   const filePath = heartPath(process.cwd());
@@ -28,11 +28,17 @@ export async function runFreeze(_args: string[]): Promise<number> {
     }
 
     const now = new Date().toISOString();
+    const { ai: existingAi, comment: _legacyComment, ...rest } = raw;
+    const ai =
+      typeof existingAi === "object" && existingAi !== null && !Array.isArray(existingAi)
+        ? (existingAi as Record<string, unknown>)
+        : CANONICAL_AI;
     const next = {
-      ...raw,
+      ...rest,
       why: newWhy,
       frozen_at: now,
       freezes: [...heart.freezes, { at: now, why: newWhy, note }],
+      ai,
     };
     writeHeartFile(filePath, next);
     process.stdout.write(`Frozen. Wrote ${filePath}\n`);

@@ -4,12 +4,19 @@ export interface Freeze {
   note: string;
 }
 
+export interface HeartAi {
+  edit_permission: string;
+  reason: string;
+  instruction: string;
+}
+
 export interface Heart {
   what: string;
   why: string;
   whom: string;
   frozen_at: string;
   freezes: Freeze[];
+  ai?: HeartAi;
 }
 
 const ISO_8601 =
@@ -58,6 +65,30 @@ export function validate(value: unknown): string[] {
 
   if (!isRecord(value)) {
     return ["heart.lock must be an object"];
+  }
+
+  if ("ai" in value) {
+    const ai = value.ai;
+    if (!isRecord(ai)) {
+      problems.push("ai must be an object");
+    } else {
+      if (!("edit_permission" in ai)) {
+        problems.push("ai.edit_permission is required");
+      } else if (ai.edit_permission !== "denied") {
+        problems.push('ai.edit_permission must be "denied"');
+      }
+      for (const field of ["reason", "instruction"] as const) {
+        if (!(field in ai)) {
+          problems.push(`ai.${field} is required`);
+        } else if (typeof ai[field] !== "string") {
+          problems.push(`ai.${field} must be a string`);
+        } else if ((ai[field] as string).length === 0) {
+          problems.push(`ai.${field} must be non-empty`);
+        } else if (!isSingleLine(ai[field] as string)) {
+          problems.push(`ai.${field} must be a single line`);
+        }
+      }
+    }
   }
 
   const what = validateRequiredString(value, "what", problems);

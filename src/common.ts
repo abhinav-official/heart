@@ -3,6 +3,14 @@ import path from "node:path";
 import readline from "node:readline";
 import { validate, type Heart } from "./validate.js";
 
+export const CANONICAL_AI = {
+  edit_permission: "denied" as const,
+  reason:
+    "This file is the project's frozen heart: what it is, why it exists, and whom it is for. Only a human may change it, by hand, through a freeze (heart freeze).",
+  instruction:
+    "Read the what, why and whom above before working on this project. If the work in front of you does not serve the why, say so before doing it.",
+};
+
 export function heartPath(dir: string): string {
   return path.join(dir, "heart.lock");
 }

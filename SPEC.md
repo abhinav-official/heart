@@ -1,6 +1,6 @@
 # Heart Specification
 
-This document defines the `heart.lock` format.
+This document defines the `heart.lock` format. The format is project- and language-agnostic and not tied to Node or npm.
 
 ## Format
 
@@ -13,6 +13,17 @@ This document defines the `heart.lock` format.
 | `whom` | string | yes | Non-empty, single line. Whom the project is for. |
 | `frozen_at` | string | yes | ISO 8601 timestamp of the latest freeze. Must equal the `at` of the last entry in `freezes`. |
 | `freezes` | array | yes | Oldest first. Each entry records a freeze. Must contain at least one entry. |
+| `ai` | object | no | The standard lock instruction for AI agents: no project meaning. Optional for validity (older files without it stay valid), but `init` always writes it and `freeze` adds it if missing. Written as the last field in the file. |
+
+### AI block
+
+When present, `ai` is an object with these fields:
+
+| Field | Type | Required | Rules |
+|---|---|---|---|
+| `edit_permission` | string | yes | Fixed text, not a setting. Only valid value: `"denied"`. |
+| `reason` | string | yes | Non-empty, single line. Why the file is locked. |
+| `instruction` | string | yes | Non-empty, single line. What AI agents should do before working. |
 
 ### Freeze entry
 

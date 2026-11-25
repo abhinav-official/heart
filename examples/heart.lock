@@ -1,0 +1,18 @@
+{
+  "what": "One line: what this project is.",
+  "why": "One line: why this project exists.",
+  "whom": "One line: whom this project is for.",
+  "frozen_at": "2026-01-01T00:00:00Z",
+  "freezes": [
+    {
+      "at": "2026-01-01T00:00:00Z",
+      "why": "One line: why this project exists.",
+      "note": "First freeze."
+    }
+  ],
+  "ai": {
+    "edit_permission": "denied",
+    "reason": "This file is the project's frozen heart: what it is, why it exists, and whom it is for. Only a human may change it, by hand, through a freeze (heart freeze).",
+    "instruction": "Read the what, why and whom above before working on this project. If the work in front of you does not serve the why, say so before doing it."
+  }
+}

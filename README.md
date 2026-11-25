@@ -2,9 +2,9 @@ what: "A tiny package that gives any project a heart.lock: what it is, why it ex
 why: "AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it."
 whom: "Makers building with AI who do not want their projects to drift."
 
-# Heart
+# Heartlock
 
-Heart gives any project a `heart.lock` at the repo root that answers three questions in one line each: **what**, **why**, and **whom**. It is a small, frozen contract for a project's intent - readable by humans, tools, and AI agents.
+Heartlock is for **any project with a repo, in any language**. No Node install is required to use the file and the rules. A `heart.lock` at the repo root answers three questions in one line each: **what**, **why**, and **whom**. It is a small, frozen contract for a project's intent - readable by humans, tools, and AI agents.
 
 ## The Idea
 
@@ -16,15 +16,27 @@ Projects drift. Tools change, teams change, AI agents make fast decisions, and t
 2. **No tool ever writes `heart.lock`.** The only write path is a human running the CLI freeze command.
 3. **Updates are append-only timestamped freezes, never edits.** History is never rewritten, and the current `why` is always the latest freeze.
 
-## Coming CLI
+## Use it without installing anything
 
-The CLI (stage 1 ships the spec and validator; commands come next):
+You don't need the CLI to use Heartlock.
+
+1. Copy [`examples/heart.lock`](./examples/heart.lock) into your project root as `heart.lock`.
+2. Edit the three lines by hand: `what`, `why`, and `whom`.
+3. Freeze by hand following [SPEC.md](./SPEC.md): set `frozen_at`, and append a freeze entry to `freezes` with `at`, `why`, and `note`. When the why changes, append a new freeze entry and update the top-level `why` and `frozen_at` - never rewrite history.
+
+The file is plain JSON. Any editor, any language, any stack.
+
+## CLI (convenient, not required)
+
+The `heart` CLI is a convenient way to work with `heart.lock`:
 
 - `heart init` - create a `heart.lock` with the first freeze.
 - `heart check` - validate `heart.lock` against the spec.
 - `heart freeze` - append a new freeze (the only write path).
-- `heart card` - show the current heart.
-- `heart drift` - compare recent work against the frozen why.
+- `heart card` - render the current heart as SVG/HTML.
+- `heart drift` - compare recent work against the frozen why. *(coming)*
+
+Install with npm if you want it: `npm install -g heartlock` (or run from this repo).
 
 ## Agent Snippet
 
