@@ -1,0 +1,12 @@
+{
+  "what": "A tiny package that gives any project a heart.",
+  "why": "Projects should not drift from their purpose.",
+  "frozen_at": "2026-11-25T12:00:00Z",
+  "freezes": [
+    {
+      "at": "2026-11-25T12:00:00Z",
+      "why": "Projects should not drift from their purpose.",
+      "note": "Initial freeze."
+    }
+  ]
+}
