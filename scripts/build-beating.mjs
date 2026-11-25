@@ -17,32 +17,59 @@ function esc(text) {
     .replace(/"/g, "&quot;");
 }
 
+function countLabel(n) {
+  return String(n).padStart(2, "0");
+}
+
+function fileTab(entry) {
+  return `            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">${esc(entry.name)} <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="${esc(entry.repo)}" aria-label="Open ${esc(entry.name)} repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>`;
+}
+
+function specRows(entry) {
+  return `            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>${esc(entry.what)}</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>${esc(entry.why)}</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>${esc(entry.whom)}</dd></div>
+            </dl>`;
+}
+
 function renderMaker(entry) {
-  return `          <article class="carousel-card entry">
-            <div class="entry-header">
-              <h3><a href="${esc(entry.repo)}">${esc(entry.name)}</a></h3>
-              <span class="status frozen">frozen by the maker</span>
+  return `          <article class="swiper-slide maker-card">
+${fileTab(entry)}
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="project-name"><a href="${esc(entry.repo)}" target="_blank" rel="noopener noreferrer">${esc(entry.name)}</a></h3>
+                <span class="status-pill frozen-pill"><span class="pulse-dot" aria-hidden="true"></span>FROZEN BY MAKER</span>
+              </div>
+${specRows(entry)}
             </div>
-            <dl>
-              <div class="row"><dt>What</dt><dd>${esc(entry.what)}</dd></div>
-              <div class="row"><dt>Why</dt><dd>${esc(entry.why)}</dd></div>
-              <div class="row"><dt>Whom</dt><dd>${esc(entry.whom)}</dd></div>
-            </dl>
-            <p class="heartbeat">Heartbeat: last frozen ${esc(entry.last_frozen)}</p>
+            <div class="card-footer">
+              <span>Heartbeat: last frozen ${esc(entry.last_frozen)}</span>
+            </div>
           </article>`;
 }
 
 function renderExample(entry) {
-  return `        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="${esc(entry.repo)}">${esc(entry.name)}</a></h3>
-            <span class="status">example</span>
+  return `        <article class="example-card">
+${fileTab(entry)}
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="${esc(entry.repo)}" target="_blank" rel="noopener noreferrer">${esc(entry.name)}</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+${specRows(entry)}
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>${esc(entry.what)}</dd></div>
-            <div class="row"><dt>Why</dt><dd>${esc(entry.why)}</dd></div>
-            <div class="row"><dt>Whom</dt><dd>${esc(entry.whom)}</dd></div>
-          </dl>
         </article>`;
 }
 
@@ -56,61 +83,95 @@ const html = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beating</title>
   <meta name="description" content="Projects that carry a heart.lock, and what their hearts say.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
     <header class="hero">
-      <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 20.5C10.2 18.9 4 14 4 9.2C4 6.3 6.2 4 9 4C10.7 4 12.2 4.8 13 6C13.8 4.8 15.3 4 17 4C19.8 4 22 6.3 22 9.2C22 14 15.8 18.9 14 20.5L12 22L10 20.5Z" fill="#b54a4a"/>
-      </svg>
-      <p class="eyebrow">The heart.lock directory</p>
-      <h1>Beating</h1>
-      <p class="intro">Projects that carry a heart.lock, and what their hearts say.</p>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="heart-wrap" aria-hidden="true">
+          <span class="heart-halo"></span>
+          <span class="heart-halo heart-halo-delay"></span>
+          <svg class="hero-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 20.5C10.2 18.9 4 14 4 9.2C4 6.3 6.2 4 9 4C10.7 4 12.2 4.8 13 6C13.8 4.8 15.3 4 17 4C19.8 4 22 6.3 22 9.2C22 14 15.8 18.9 14 20.5L12 22L10 20.5Z" fill="#C83E3B"/>
+          </svg>
+        </div>
+        <p class="eyebrow">The heart.lock directory</p>
+        <h1>Beating</h1>
+        <p class="intro">Projects that carry a heart.lock, and what their hearts say.</p>
+        <div class="ecg-divider" aria-hidden="true">
+          <span class="ecg-line"></span>
+          <svg class="ecg-spike" viewBox="0 0 24 24" fill="none"><path d="M1 12H8L10 4L14 20L16 12H23" stroke="#C83E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="ecg-line"></span>
+        </div>
+      </div>
     </header>
 
     <section class="makers" aria-labelledby="frozen">
       <div class="section-head">
-        <div>
+        <div class="section-title-wrap">
           <h2 id="frozen">Frozen by the maker</h2>
-          <p class="section-note">Real hearts, frozen by the people who build them.</p>
+          <span class="count-pill">${countLabel(makers.length)}</span>
         </div>
         <div class="carousel-controls">
-          <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous project">&#8592;</button>
-          <button type="button" class="carousel-btn" data-carousel-next aria-label="Next project">&#8594;</button>
+          <button type="button" class="carousel-btn swiper-prev" aria-label="Previous project">&#8592;</button>
+          <button type="button" class="carousel-btn swiper-next" aria-label="Next project">&#8594;</button>
         </div>
       </div>
-      <div class="carousel" data-carousel>
-        <div class="carousel-track" data-carousel-track tabindex="0" aria-label="Maker projects">
+      <div class="swiper maker-swiper">
+        <div class="swiper-wrapper">
 ${makers.map(renderMaker).join("\n\n")}
         </div>
-        <div class="carousel-dots" data-carousel-dots aria-label="Carousel position"></div>
       </div>
+      <div class="swiper-pagination maker-pagination"></div>
     </section>
 
     <section class="examples-band" aria-labelledby="examples">
       <div class="examples-inner">
-        <h2 id="examples">Examples</h2>
-        <p class="note">These are example hearts, written in the same format to show what a heart.lock could say. Each is clearly marked <strong>example</strong> until its makers freeze a real one.</p>
+        <div class="section-title-wrap">
+          <h2 id="examples">Examples</h2>
+          <span class="count-pill muted-count">${countLabel(examples.length)}</span>
+        </div>
+        <p class="note examples-note">These are example hearts, written in the same format to show what a heart.lock could say. Each is clearly marked <strong>EXAMPLE</strong> until its makers freeze a real one.</p>
         <div class="examples-grid">
 ${examples.map(renderExample).join("\n\n")}
         </div>
       </div>
     </section>
 
-    <section class="cta-section" aria-labelledby="claim">
-      <h2 id="claim">Claim your listing</h2>
-      <p class="note">1. Add a <code>heart.lock</code> to your repo and freeze it.</p>
-      <p class="note">2. Open a pull request against the <a href="https://github.com/abhinav-official/heart">heartlock repo</a> adding your entry to <code>site/beating.json</code>.</p>
-      <p class="note">3. Your entry is verified against the <code>heart.lock</code> in your repo before it merges.</p>
-      <p class="note">4. Once merged and deployed, you are listed as <strong>frozen by the maker</strong>.</p>
-      <p class="note">Claiming an example works the same way: the PR changes that entry's status to <code>maker</code> with the true freeze date.</p>
+    <section class="cta-section claim-section" aria-labelledby="claim">
+      <div class="section-title-wrap">
+        <h2 id="claim">Claim your listing</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-marker"><span class="step-circle hollow"></span><span class="step-num">01</span></div>
+          <p class="step-text">Add a <code>heart.lock</code> to your repo and freeze it.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker"><span class="step-circle hollow"></span><span class="step-num">02</span></div>
+          <p class="step-text">Open a pull request against the <a href="https://github.com/abhinav-official/heart">heartlock repo</a> adding your entry to <code>site/beating.json</code>.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker"><span class="step-circle hollow"></span><span class="step-num">03</span></div>
+          <p class="step-text">Your entry is verified against the <code>heart.lock</code> in your repo before it merges.</p>
+        </div>
+        <div class="timeline-step last">
+          <div class="timeline-marker"><span class="step-circle solid"></span><span class="step-num">04</span></div>
+          <p class="step-text">Once merged and deployed, you are listed as <strong>frozen by the maker</strong>.</p>
+        </div>
+      </div>
+      <p class="note claim-note">Claiming an example works the same way: the PR changes that entry's status to <code>maker</code> with the true freeze date.</p>
     </section>
 
-    <section class="cta-section give" aria-labelledby="give">
-      <h2 id="give">Give your project a heart</h2>
+    <section class="cta-section give-section" aria-labelledby="give">
+      <div class="section-title-wrap">
+        <h2 id="give">Give your project a heart</h2>
+      </div>
       <p class="note">Add a <code>heart.lock</code> to any repo, in any language. The format is simple, frozen by humans, and readable by every AI.</p>
-      <a class="btn-red" href="https://github.com/abhinav-official/heart/blob/main/README.md">Read the README</a>
+      <a class="btn-primary" href="https://github.com/abhinav-official/heart/blob/main/README.md">Read the README</a>
       <p class="note spec-link">Or start with the <a href="https://github.com/abhinav-official/heart/blob/main/SPEC.md">SPEC.md</a>.</p>
     </section>
 
@@ -118,7 +179,32 @@ ${examples.map(renderExample).join("\n\n")}
       <p>Beating is part of <a href="https://github.com/abhinav-official/heart">heartlock</a>.</p>
     </footer>
   </main>
-  <script src="carousel.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    (() => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const swiper = new Swiper('.maker-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: reduce ? 0 : 700,
+        loop: true,
+        autoplay: reduce ? false : { delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true },
+        coverflowEffect: { rotate: 0, stretch: 0, depth: 80, modifier: 1, slideShadows: false },
+        pagination: { el: '.maker-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-next', prevEl: '.swiper-prev' },
+        keyboard: { enabled: true },
+        a11y: { enabled: true },
+        breakpoints: {
+          720: { slidesPerView: 1.45, spaceBetween: 24 },
+          1024: { slidesPerView: 1.85, spaceBetween: 28 }
+        }
+      });
+      if (reduce) swiper.autoplay.stop();
+    })();
+  </script>
 </body>
 </html>
 `;

@@ -5,373 +5,779 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beating</title>
   <meta name="description" content="Projects that carry a heart.lock, and what their hearts say.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
     <header class="hero">
-      <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 20.5C10.2 18.9 4 14 4 9.2C4 6.3 6.2 4 9 4C10.7 4 12.2 4.8 13 6C13.8 4.8 15.3 4 17 4C19.8 4 22 6.3 22 9.2C22 14 15.8 18.9 14 20.5L12 22L10 20.5Z" fill="#b54a4a"/>
-      </svg>
-      <p class="eyebrow">The heart.lock directory</p>
-      <h1>Beating</h1>
-      <p class="intro">Projects that carry a heart.lock, and what their hearts say.</p>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="heart-wrap" aria-hidden="true">
+          <span class="heart-halo"></span>
+          <span class="heart-halo heart-halo-delay"></span>
+          <svg class="hero-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 20.5C10.2 18.9 4 14 4 9.2C4 6.3 6.2 4 9 4C10.7 4 12.2 4.8 13 6C13.8 4.8 15.3 4 17 4C19.8 4 22 6.3 22 9.2C22 14 15.8 18.9 14 20.5L12 22L10 20.5Z" fill="#C83E3B"/>
+          </svg>
+        </div>
+        <p class="eyebrow">The heart.lock directory</p>
+        <h1>Beating</h1>
+        <p class="intro">Projects that carry a heart.lock, and what their hearts say.</p>
+        <div class="ecg-divider" aria-hidden="true">
+          <span class="ecg-line"></span>
+          <svg class="ecg-spike" viewBox="0 0 24 24" fill="none"><path d="M1 12H8L10 4L14 20L16 12H23" stroke="#C83E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="ecg-line"></span>
+        </div>
+      </div>
     </header>
 
     <section class="makers" aria-labelledby="frozen">
       <div class="section-head">
-        <div>
+        <div class="section-title-wrap">
           <h2 id="frozen">Frozen by the maker</h2>
-          <p class="section-note">Real hearts, frozen by the people who build them.</p>
+          <span class="count-pill">04</span>
         </div>
         <div class="carousel-controls">
-          <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous project">&#8592;</button>
-          <button type="button" class="carousel-btn" data-carousel-next aria-label="Next project">&#8594;</button>
+          <button type="button" class="carousel-btn swiper-prev" aria-label="Previous project">&#8592;</button>
+          <button type="button" class="carousel-btn swiper-next" aria-label="Next project">&#8594;</button>
         </div>
       </div>
-      <div class="carousel" data-carousel>
-        <div class="carousel-track" data-carousel-track tabindex="0" aria-label="Maker projects">
-          <article class="carousel-card entry">
-            <div class="entry-header">
-              <h3><a href="https://github.com/abhinav-official/heart">heartlock</a></h3>
-              <span class="status frozen">frozen by the maker</span>
+      <div class="swiper maker-swiper">
+        <div class="swiper-wrapper">
+          <article class="swiper-slide maker-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">heartlock <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/abhinav-official/heart" aria-label="Open heartlock repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-            <dl>
-              <div class="row"><dt>What</dt><dd>A tiny package that gives any project a heart.lock: what it is, why it exists, and whom it is for, in one line each.</dd></div>
-              <div class="row"><dt>Why</dt><dd>AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it.</dd></div>
-              <div class="row"><dt>Whom</dt><dd>Makers building with AI who do not want their projects to drift.</dd></div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="project-name"><a href="https://github.com/abhinav-official/heart" target="_blank" rel="noopener noreferrer">heartlock</a></h3>
+                <span class="status-pill frozen-pill"><span class="pulse-dot" aria-hidden="true"></span>FROZEN BY MAKER</span>
+              </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A tiny package that gives any project a heart.lock: what it is, why it exists, and whom it is for, in one line each.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Makers building with AI who do not want their projects to drift.</dd></div>
             </dl>
-            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+            </div>
+            <div class="card-footer">
+              <span>Heartbeat: last frozen 2026-11-25</span>
+            </div>
           </article>
 
-          <article class="carousel-card entry">
-            <div class="entry-header">
-              <h3><a href="https://github.com/abhinav-official/drop">drop</a></h3>
-              <span class="status frozen">frozen by the maker</span>
+          <article class="swiper-slide maker-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">drop <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/abhinav-official/drop" aria-label="Open drop repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-            <dl>
-              <div class="row"><dt>What</dt><dd>Send a file with a 6-letter code.</dd></div>
-              <div class="row"><dt>Why</dt><dd>Sharing a file should need no account and no waiting.</dd></div>
-              <div class="row"><dt>Whom</dt><dd>Anyone with a file and a friend.</dd></div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="project-name"><a href="https://github.com/abhinav-official/drop" target="_blank" rel="noopener noreferrer">drop</a></h3>
+                <span class="status-pill frozen-pill"><span class="pulse-dot" aria-hidden="true"></span>FROZEN BY MAKER</span>
+              </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>Send a file with a 6-letter code.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Sharing a file should need no account and no waiting.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone with a file and a friend.</dd></div>
             </dl>
-            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+            </div>
+            <div class="card-footer">
+              <span>Heartbeat: last frozen 2026-11-25</span>
+            </div>
           </article>
 
-          <article class="carousel-card entry">
-            <div class="entry-header">
-              <h3><a href="https://github.com/abhinav-official/zcurv">zcurv.com</a></h3>
-              <span class="status frozen">frozen by the maker</span>
+          <article class="swiper-slide maker-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">zcurv.com <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/abhinav-official/zcurv" aria-label="Open zcurv.com repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-            <dl>
-              <div class="row"><dt>What</dt><dd>Abhinav Jha's home on the internet: who he is, what he builds, and how to reach him.</dd></div>
-              <div class="row"><dt>Why</dt><dd>One address that is his, not a platform's, where his work stays findable whatever else changes.</dd></div>
-              <div class="row"><dt>Whom</dt><dd>Anyone who wants to know what he builds: employers, collaborators, and the curious.</dd></div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="project-name"><a href="https://github.com/abhinav-official/zcurv" target="_blank" rel="noopener noreferrer">zcurv.com</a></h3>
+                <span class="status-pill frozen-pill"><span class="pulse-dot" aria-hidden="true"></span>FROZEN BY MAKER</span>
+              </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>Abhinav Jha's home on the internet: who he is, what he builds, and how to reach him.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>One address that is his, not a platform's, where his work stays findable whatever else changes.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone who wants to know what he builds: employers, collaborators, and the curious.</dd></div>
             </dl>
-            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+            </div>
+            <div class="card-footer">
+              <span>Heartbeat: last frozen 2026-11-25</span>
+            </div>
           </article>
 
-          <article class="carousel-card entry">
-            <div class="entry-header">
-              <h3><a href="https://github.com/abhinav-official/content-engine">content-engine</a></h3>
-              <span class="status frozen">frozen by the maker</span>
+          <article class="swiper-slide maker-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">content-engine <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/abhinav-official/content-engine" aria-label="Open content-engine repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-            <dl>
-              <div class="row"><dt>What</dt><dd>One engine that makes and publishes every channel's videos: Interval and Mavi, a long and its Shorts every day.</dd></div>
-              <div class="row"><dt>Why</dt><dd>Two channels, one system, so a daily video never depends on a day's motivation.</dd></div>
-              <div class="row"><dt>Whom</dt><dd>Abhinav, the only operator; and through the channels, viewers who come for film essays and psychology.</dd></div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="project-name"><a href="https://github.com/abhinav-official/content-engine" target="_blank" rel="noopener noreferrer">content-engine</a></h3>
+                <span class="status-pill frozen-pill"><span class="pulse-dot" aria-hidden="true"></span>FROZEN BY MAKER</span>
+              </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>One engine that makes and publishes every channel's videos: Interval and Mavi, a long and its Shorts every day.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Two channels, one system, so a daily video never depends on a day's motivation.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Abhinav, the only operator; and through the channels, viewers who come for film essays and psychology.</dd></div>
             </dl>
-            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+            </div>
+            <div class="card-footer">
+              <span>Heartbeat: last frozen 2026-11-25</span>
+            </div>
           </article>
         </div>
-        <div class="carousel-dots" data-carousel-dots aria-label="Carousel position"></div>
       </div>
+      <div class="swiper-pagination maker-pagination"></div>
     </section>
 
     <section class="examples-band" aria-labelledby="examples">
       <div class="examples-inner">
-        <h2 id="examples">Examples</h2>
-        <p class="note">These are example hearts, written in the same format to show what a heart.lock could say. Each is clearly marked <strong>example</strong> until its makers freeze a real one.</p>
+        <div class="section-title-wrap">
+          <h2 id="examples">Examples</h2>
+          <span class="count-pill muted-count">22</span>
+        </div>
+        <p class="note examples-note">These are example hearts, written in the same format to show what a heart.lock could say. Each is clearly marked <strong>EXAMPLE</strong> until its makers freeze a real one.</p>
         <div class="examples-grid">
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/torvalds/linux">Linux</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Linux <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/torvalds/linux" aria-label="Open Linux repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/torvalds/linux" target="_blank" rel="noopener noreferrer">Linux</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>An open-source operating system kernel that runs on everything from phones to supercomputers.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Software should be free to study, change, and share, all the way down to the core.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone who needs a foundation they can trust, inspect, and own.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>An open-source operating system kernel that runs on everything from phones to supercomputers.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Software should be free to study, change, and share, all the way down to the core.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Anyone who needs a foundation they can trust, inspect, and own.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/git/git">Git</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Git <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/git/git" aria-label="Open Git repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/git/git" target="_blank" rel="noopener noreferrer">Git</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A distributed version control system for tracking changes in files and coordinating work.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>People should be able to work together on code without losing history or trusting a central machine.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone who makes things in files and needs to remember, compare, and collaborate.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A distributed version control system for tracking changes in files and coordinating work.</dd></div>
-            <div class="row"><dt>Why</dt><dd>People should be able to work together on code without losing history or trusting a central machine.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Anyone who makes things in files and needs to remember, compare, and collaborate.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/curl/curl">curl</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">curl <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/curl/curl" aria-label="Open curl repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/curl/curl" target="_blank" rel="noopener noreferrer">curl</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A command-line tool and library for transferring data with URLs.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Moving data across networks should be reliable, scriptable, and available everywhere.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers and systems that need to speak to the internet from the command line or from code.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A command-line tool and library for transferring data with URLs.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Moving data across networks should be reliable, scriptable, and available everywhere.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers and systems that need to speak to the internet from the command line or from code.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/sqlite/sqlite">SQLite</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">SQLite <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/sqlite/sqlite" aria-label="Open SQLite repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/sqlite/sqlite" target="_blank" rel="noopener noreferrer">SQLite</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A small, self-contained SQL database engine that lives in a single file.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Reliable structured data should not require a server, setup, or maintenance.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers who need a database that just works, embedded wherever data lives.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A small, self-contained SQL database engine that lives in a single file.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Reliable structured data should not require a server, setup, or maintenance.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers who need a database that just works, embedded wherever data lives.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/facebook/react">React</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">React <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/facebook/react" aria-label="Open React repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/facebook/react" target="_blank" rel="noopener noreferrer">React</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A JavaScript library for building user interfaces from components.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Complex interfaces become manageable when the UI is a clear function of state.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers building interactive interfaces on the web and beyond.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A JavaScript library for building user interfaces from components.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Complex interfaces become manageable when the UI is a clear function of state.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers building interactive interfaces on the web and beyond.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/vuejs/core">Vue</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Vue <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/vuejs/core" aria-label="Open Vue repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/vuejs/core" target="_blank" rel="noopener noreferrer">Vue</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A progressive JavaScript framework for building web user interfaces.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Building for the web should feel approachable without giving up power.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers who want a framework that can start simple and grow with the project.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A progressive JavaScript framework for building web user interfaces.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Building for the web should feel approachable without giving up power.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers who want a framework that can start simple and grow with the project.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/kubernetes/kubernetes">Kubernetes</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Kubernetes <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/kubernetes/kubernetes" aria-label="Open Kubernetes repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">Kubernetes</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>An open-source system for automating deployment, scaling, and management of containerized applications.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Running software at scale should be declarative, resilient, and not tied to one machine.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Teams operating applications that need to run reliably across many machines.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>An open-source system for automating deployment, scaling, and management of containerized applications.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Running software at scale should be declarative, resilient, and not tied to one machine.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Teams operating applications that need to run reliably across many machines.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/moby/moby">Docker</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Docker <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/moby/moby" aria-label="Open Docker repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/moby/moby" target="_blank" rel="noopener noreferrer">Docker</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A platform for packaging and running applications in containers.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Software should run the same way everywhere, from a laptop to production.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers and operators who want to ship applications without environment surprises.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A platform for packaging and running applications in containers.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Software should run the same way everywhere, from a laptop to production.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers and operators who want to ship applications without environment surprises.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/microsoft/vscode">VS Code</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">VS Code <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/microsoft/vscode" aria-label="Open VS Code repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/microsoft/vscode" target="_blank" rel="noopener noreferrer">VS Code</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A free, extensible code editor for building and debugging modern software.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>A developer's editor should be fast, capable, and shaped by the community that uses it.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers who want one editor that adapts to every language and workflow.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A free, extensible code editor for building and debugging modern software.</dd></div>
-            <div class="row"><dt>Why</dt><dd>A developer's editor should be fast, capable, and shaped by the community that uses it.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers who want one editor that adapts to every language and workflow.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/blender/blender">Blender</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Blender <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/blender/blender" aria-label="Open Blender repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/blender/blender" target="_blank" rel="noopener noreferrer">Blender</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A free, open-source 3D creation suite for modeling, animation, rendering, and more.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Professional creative tools should be available to everyone, not locked behind a price tag.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Artists, studios, and learners who want to create 3D work without permission.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A free, open-source 3D creation suite for modeling, animation, rendering, and more.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Professional creative tools should be available to everyone, not locked behind a price tag.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Artists, studios, and learners who want to create 3D work without permission.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/wikimedia/mediawiki">Wikipedia (MediaWiki)</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Wikipedia (MediaWiki) <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/wikimedia/mediawiki" aria-label="Open Wikipedia (MediaWiki) repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/wikimedia/mediawiki" target="_blank" rel="noopener noreferrer">Wikipedia (MediaWiki)</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>The wiki platform that powers Wikipedia and other collaborative knowledge projects.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Human knowledge should be free for everyone to read, share, and improve.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Communities that want to collect and share knowledge in the open.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>The wiki platform that powers Wikipedia and other collaborative knowledge projects.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Human knowledge should be free for everyone to read, share, and improve.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Communities that want to collect and share knowledge in the open.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/mozilla/gecko-dev">Firefox</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Firefox <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/mozilla/gecko-dev" aria-label="Open Firefox repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/mozilla/gecko-dev" target="_blank" rel="noopener noreferrer">Firefox</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A free, open-source web browser built by Mozilla.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>The web should stay open, private, and not controlled by a single company.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>People who want to browse the web on their own terms.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A free, open-source web browser built by Mozilla.</dd></div>
-            <div class="row"><dt>Why</dt><dd>The web should stay open, private, and not controlled by a single company.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>People who want to browse the web on their own terms.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/postgres/postgres">PostgreSQL</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">PostgreSQL <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/postgres/postgres" aria-label="Open PostgreSQL repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/postgres/postgres" target="_blank" rel="noopener noreferrer">PostgreSQL</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>An advanced open-source relational database system.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Data deserves a store that is correct, extensible, and built to last decades.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers and organizations who need a dependable database they can trust with important data.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>An advanced open-source relational database system.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Data deserves a store that is correct, extensible, and built to last decades.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers and organizations who need a dependable database they can trust with important data.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/redis/redis">Redis</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Redis <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/redis/redis" aria-label="Open Redis repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/redis/redis" target="_blank" rel="noopener noreferrer">Redis</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>An in-memory data structure store used as a database, cache, and message broker.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Some data needs to be read and written faster than a disk can go.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers building systems that need fast, simple access to shared state.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>An in-memory data structure store used as a database, cache, and message broker.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Some data needs to be read and written faster than a disk can go.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers building systems that need fast, simple access to shared state.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/nodejs/node">Node.js</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Node.js <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/nodejs/node" aria-label="Open Node.js repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/nodejs/node" target="_blank" rel="noopener noreferrer">Node.js</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A JavaScript runtime built on Chrome's V8 engine for running code outside the browser.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>JavaScript should be useful beyond the page, for servers, tools, and scripts.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers who want to build networked software with JavaScript.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A JavaScript runtime built on Chrome's V8 engine for running code outside the browser.</dd></div>
-            <div class="row"><dt>Why</dt><dd>JavaScript should be useful beyond the page, for servers, tools, and scripts.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers who want to build networked software with JavaScript.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/python/cpython">Python</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Python <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/python/cpython" aria-label="Open Python repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/python/cpython" target="_blank" rel="noopener noreferrer">Python</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A programming language designed for readability and broad usefulness.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Programming should be clear enough that humans can read it, not just machines.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone who wants to turn ideas into working programs, from beginners to experts.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A programming language designed for readability and broad usefulness.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Programming should be clear enough that humans can read it, not just machines.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Anyone who wants to turn ideas into working programs, from beginners to experts.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/rust-lang/rust">Rust</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Rust <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/rust-lang/rust" aria-label="Open Rust repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/rust-lang/rust" target="_blank" rel="noopener noreferrer">Rust</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A programming language for building fast, reliable software.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Systems software should be both performant and safe, without trading one for the other.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Developers who need low-level control without low-level memory bugs.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A programming language for building fast, reliable software.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Systems software should be both performant and safe, without trading one for the other.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Developers who need low-level control without low-level memory bugs.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/golang/go">Go</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Go <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/golang/go" aria-label="Open Go repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/golang/go" target="_blank" rel="noopener noreferrer">Go</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A programming language built for simple, reliable, and efficient software.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Building and maintaining large software systems should stay straightforward.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Teams building networked services and tools that need to be easy to read and operate.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A programming language built for simple, reliable, and efficient software.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Building and maintaining large software systems should stay straightforward.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Teams building networked services and tools that need to be easy to read and operate.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/WordPress/WordPress">WordPress</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">WordPress <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/WordPress/WordPress" aria-label="Open WordPress repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/WordPress/WordPress" target="_blank" rel="noopener noreferrer">WordPress</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>An open-source content management system for publishing on the web.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Publishing on the internet should be possible for anyone, not just developers.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>People and organizations who want to own and publish their own website.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>An open-source content management system for publishing on the web.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Publishing on the internet should be possible for anyone, not just developers.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>People and organizations who want to own and publish their own website.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/FFmpeg/FFmpeg">ffmpeg</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">ffmpeg <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/FFmpeg/FFmpeg" aria-label="Open ffmpeg repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/FFmpeg/FFmpeg" target="_blank" rel="noopener noreferrer">ffmpeg</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A complete, cross-platform toolkit for recording, converting, and streaming audio and video.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Working with media should not be blocked by formats, codecs, or proprietary tools.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone who needs to process audio or video, from hobbyists to production systems.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A complete, cross-platform toolkit for recording, converting, and streaming audio and video.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Working with media should not be blocked by formats, codecs, or proprietary tools.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Anyone who needs to process audio or video, from hobbyists to production systems.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/obsproject/obs-studio">OBS Studio</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">OBS Studio <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/obsproject/obs-studio" aria-label="Open OBS Studio repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/obsproject/obs-studio" target="_blank" rel="noopener noreferrer">OBS Studio</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>Free, open-source software for video recording and live streaming.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Broadcasting yourself to the world should not require expensive or closed tools.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Creators, educators, and anyone who wants to record or stream video.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>Free, open-source software for video recording and live streaming.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Broadcasting yourself to the world should not require expensive or closed tools.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Creators, educators, and anyone who wants to record or stream video.</dd></div>
-          </dl>
         </article>
 
-        <article class="entry example-entry">
-          <div class="entry-header">
-            <h3><a href="https://github.com/signalapp/Signal-Android">Signal</a></h3>
-            <span class="status">example</span>
+        <article class="example-card">
+            <div class="file-tab">
+              <div class="file-tab-left">
+                <svg class="file-lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="file-name">Signal <span class="file-sep">/</span> heart.lock</span>
+              </div>
+              <a class="file-link" href="https://github.com/signalapp/Signal-Android" aria-label="Open Signal repository" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3h7v7M13 3L6 10M13 13H3V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="project-name"><a href="https://github.com/signalapp/Signal-Android" target="_blank" rel="noopener noreferrer">Signal</a></h3>
+              <span class="status-pill example-pill">EXAMPLE</span>
+            </div>
+            <dl class="spec-sheet">
+              <div class="spec-row"><dt>WHAT</dt><dd>A private messaging app with end-to-end encryption.</dd></div>
+              <div class="spec-row"><dt>WHY</dt><dd>Private conversation should be the default, not a premium feature.</dd></div>
+              <div class="spec-row"><dt>WHOM</dt><dd>Anyone who wants to communicate without being overheard.</dd></div>
+            </dl>
           </div>
-          <dl>
-            <div class="row"><dt>What</dt><dd>A private messaging app with end-to-end encryption.</dd></div>
-            <div class="row"><dt>Why</dt><dd>Private conversation should be the default, not a premium feature.</dd></div>
-            <div class="row"><dt>Whom</dt><dd>Anyone who wants to communicate without being overheard.</dd></div>
-          </dl>
         </article>
         </div>
       </div>
     </section>
 
-    <section class="cta-section" aria-labelledby="claim">
-      <h2 id="claim">Claim your listing</h2>
-      <p class="note">1. Add a <code>heart.lock</code> to your repo and freeze it.</p>
-      <p class="note">2. Open a pull request against the <a href="https://github.com/abhinav-official/heart">heartlock repo</a> adding your entry to <code>site/beating.json</code>.</p>
-      <p class="note">3. Your entry is verified against the <code>heart.lock</code> in your repo before it merges.</p>
-      <p class="note">4. Once merged and deployed, you are listed as <strong>frozen by the maker</strong>.</p>
-      <p class="note">Claiming an example works the same way: the PR changes that entry's status to <code>maker</code> with the true freeze date.</p>
+    <section class="cta-section claim-section" aria-labelledby="claim">
+      <div class="section-title-wrap">
+        <h2 id="claim">Claim your listing</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-marker"><span class="step-circle hollow"></span><span class="step-num">01</span></div>
+          <p class="step-text">Add a <code>heart.lock</code> to your repo and freeze it.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker"><span class="step-circle hollow"></span><span class="step-num">02</span></div>
+          <p class="step-text">Open a pull request against the <a href="https://github.com/abhinav-official/heart">heartlock repo</a> adding your entry to <code>site/beating.json</code>.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker"><span class="step-circle hollow"></span><span class="step-num">03</span></div>
+          <p class="step-text">Your entry is verified against the <code>heart.lock</code> in your repo before it merges.</p>
+        </div>
+        <div class="timeline-step last">
+          <div class="timeline-marker"><span class="step-circle solid"></span><span class="step-num">04</span></div>
+          <p class="step-text">Once merged and deployed, you are listed as <strong>frozen by the maker</strong>.</p>
+        </div>
+      </div>
+      <p class="note claim-note">Claiming an example works the same way: the PR changes that entry's status to <code>maker</code> with the true freeze date.</p>
     </section>
 
-    <section class="cta-section give" aria-labelledby="give">
-      <h2 id="give">Give your project a heart</h2>
+    <section class="cta-section give-section" aria-labelledby="give">
+      <div class="section-title-wrap">
+        <h2 id="give">Give your project a heart</h2>
+      </div>
       <p class="note">Add a <code>heart.lock</code> to any repo, in any language. The format is simple, frozen by humans, and readable by every AI.</p>
-      <a class="btn-red" href="https://github.com/abhinav-official/heart/blob/main/README.md">Read the README</a>
+      <a class="btn-primary" href="https://github.com/abhinav-official/heart/blob/main/README.md">Read the README</a>
       <p class="note spec-link">Or start with the <a href="https://github.com/abhinav-official/heart/blob/main/SPEC.md">SPEC.md</a>.</p>
     </section>
 
@@ -379,6 +785,31 @@
       <p>Beating is part of <a href="https://github.com/abhinav-official/heart">heartlock</a>.</p>
     </footer>
   </main>
-  <script src="carousel.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    (() => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const swiper = new Swiper('.maker-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: reduce ? 0 : 700,
+        loop: true,
+        autoplay: reduce ? false : { delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true },
+        coverflowEffect: { rotate: 0, stretch: 0, depth: 80, modifier: 1, slideShadows: false },
+        pagination: { el: '.maker-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-next', prevEl: '.swiper-prev' },
+        keyboard: { enabled: true },
+        a11y: { enabled: true },
+        breakpoints: {
+          720: { slidesPerView: 1.45, spaceBetween: 24 },
+          1024: { slidesPerView: 1.85, spaceBetween: 28 }
+        }
+      });
+      if (reduce) swiper.autoplay.stop();
+    })();
+  </script>
 </body>
 </html>
