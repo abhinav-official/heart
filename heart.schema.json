@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/abhinav-official/heart/blob/main/heart.schema.json",
-  "title": "Heart",
-  "description": "A project's frozen heart: what, why, whom.",
+  "title": "Heart Lock",
+  "description": "JSON Schema describing heart.lock: a project's frozen heart - what, why, whom.",
   "type": "object",
   "additionalProperties": false,
   "required": ["what", "why", "whom", "frozen_at", "freezes"],

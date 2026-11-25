@@ -4,7 +4,7 @@ import { daysSince, formatDate, readHeartFile } from "../common.js";
 export async function runCheck(args: string[]): Promise<number> {
   const target = args[0]
     ? path.resolve(process.cwd(), args[0])
-    : path.join(process.cwd(), "heart.json");
+    : path.join(process.cwd(), "heart.lock");
 
   const result = readHeartFile(target);
   if (!result.ok) {

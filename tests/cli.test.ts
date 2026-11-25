@@ -21,7 +21,7 @@ function makeTempDir(): string {
   return mkdtempSync(path.join(os.tmpdir(), "heart-test-"));
 }
 
-test("init creates a valid heart.json from piped answers and refuses a second init", () => {
+test("init creates a valid heart.lock from piped answers and refuses a second init", () => {
   const dir = makeTempDir();
   try {
     const first = runCli(["init"], {
@@ -29,7 +29,7 @@ test("init creates a valid heart.json from piped answers and refuses a second in
       input: "My project\nBecause it matters\nBuilders\n",
     });
     assert.equal(first.status, 0, first.stderr || first.stdout);
-    const heartPath = path.join(dir, "heart.json");
+    const heartPath = path.join(dir, "heart.lock");
     assert.ok(existsSync(heartPath));
     const heart = JSON.parse(readFileSync(heartPath, "utf8")) as unknown;
     assert.deepEqual(validate(heart), []);
@@ -64,7 +64,7 @@ test("check exits 0 on a valid heart and 1 on missing and on invalid", () => {
       frozen_at: "2026-11-25T12:00:00Z",
       freezes: [{ at: "2026-11-25T12:00:00Z", why: "A reason", note: "First freeze." }],
     };
-    writeFileSync(path.join(dir, "heart.json"), JSON.stringify(validHeart, null, 2) + "\n", "utf8");
+    writeFileSync(path.join(dir, "heart.lock"), JSON.stringify(validHeart, null, 2) + "\n", "utf8");
     const valid = runCli(["check"], { cwd: dir });
     assert.equal(valid.status, 0, valid.stderr || valid.stdout);
     assert.match(valid.stdout, /what: A project/);
@@ -75,7 +75,7 @@ test("check exits 0 on a valid heart and 1 on missing and on invalid", () => {
     const badDir = makeTempDir();
     try {
       writeFileSync(
-        path.join(badDir, "heart.json"),
+        path.join(badDir, "heart.lock"),
         JSON.stringify({ what: "x" }, null, 2) + "\n",
         "utf8",
       );
@@ -101,7 +101,7 @@ test("freeze appends a freeze, updates why and frozen_at, and leaves the earlier
       freezes: [{ at: "2026-11-20T12:00:00Z", why: "Old why", note: "First freeze." }],
       extra: "preserved",
     };
-    writeFileSync(path.join(dir, "heart.json"), JSON.stringify(initial, null, 2) + "\n", "utf8");
+    writeFileSync(path.join(dir, "heart.lock"), JSON.stringify(initial, null, 2) + "\n", "utf8");
 
     const result = runCli(["freeze"], {
       cwd: dir,
@@ -109,7 +109,7 @@ test("freeze appends a freeze, updates why and frozen_at, and leaves the earlier
     });
     assert.equal(result.status, 0, result.stderr || result.stdout);
 
-    const updated = JSON.parse(readFileSync(path.join(dir, "heart.json"), "utf8")) as {
+    const updated = JSON.parse(readFileSync(path.join(dir, "heart.lock"), "utf8")) as {
       why: string;
       frozen_at: string;
       freezes: Array<{ at: string; why: string; note: string }>;
@@ -142,7 +142,7 @@ test("card writes both files and the SVG contains the why text", () => {
       frozen_at: "2026-11-25T12:00:00Z",
       freezes: [{ at: "2026-11-25T12:00:00Z", why: "A reason worth keeping", note: "First freeze." }],
     };
-    writeFileSync(path.join(dir, "heart.json"), JSON.stringify(heart, null, 2) + "\n", "utf8");
+    writeFileSync(path.join(dir, "heart.lock"), JSON.stringify(heart, null, 2) + "\n", "utf8");
 
     const result = runCli(["card"], { cwd: dir });
     assert.equal(result.status, 0, result.stderr || result.stdout);
@@ -157,7 +157,7 @@ test("card writes both files and the SVG contains the why text", () => {
     assert.match(svg, /WHY/);
     assert.match(svg, /WHOM/);
     assert.match(svg, /Last frozen 2026-11-25/);
-    assert.match(svg, /heart\.json/);
+    assert.match(svg, /heart\.lock/);
     assert.match(html, /<svg/);
     assert.match(html, /A reason worth keeping/);
   } finally {

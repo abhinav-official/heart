@@ -6,7 +6,7 @@ export async function runInit(_args: string[]): Promise<number> {
   const dir = process.cwd();
   const filePath = heartPath(dir);
   if (existsSync(filePath)) {
-    process.stderr.write(`heart.json already exists at ${filePath}\n`);
+    process.stderr.write(`heart.lock already exists at ${filePath}\n`);
     return 1;
   }
 

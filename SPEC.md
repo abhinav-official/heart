@@ -1,10 +1,10 @@
 # Heart Specification
 
-This document defines the `heart.json` format.
+This document defines the `heart.lock` format.
 
 ## Format
 
-`heart.json` is a JSON object at the repository root with these fields:
+`heart.lock` is a JSON object at the repository root with these fields:
 
 | Field | Type | Required | Rules |
 |---|---|---|---|
@@ -27,7 +27,7 @@ Each object in `freezes` has:
 ## The Three Laws
 
 1. **Three questions, one line each, that is the whole surface.** `what`, `why`, and `whom` are the entire contract. No extra fields carry meaning.
-2. **No tool ever writes `heart.json`.** The only write path is a human running the CLI freeze command.
+2. **No tool ever writes `heart.lock`.** The only write path is a human running the CLI freeze command.
 3. **Updates are append-only timestamped freezes, never edits.** History is never rewritten. The current `why` is always the latest freeze's `why`.
 
 ## Freeze Semantics

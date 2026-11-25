@@ -7,7 +7,7 @@ export async function runFreeze(_args: string[]): Promise<number> {
     if (result.error === "No heart found.") {
       process.stderr.write("No heart found.\n");
     } else {
-      process.stderr.write(`Invalid heart.json:\n${result.error}\n`);
+      process.stderr.write(`Invalid heart.lock:\n${result.error}\n`);
     }
     return 1;
   }

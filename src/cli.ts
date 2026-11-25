@@ -7,9 +7,9 @@ import { runCard } from "./commands/card.js";
 const USAGE = `Usage: heart <command> [options]
 
 Commands:
-  init              Create heart.json in the current directory
-  check [path]      Validate heart.json (or a specific file)
-  freeze            Append a new freeze to heart.json
+  init              Create heart.lock in the current directory
+  check [path]      Validate heart.lock (or a specific file)
+  freeze            Append a new freeze to heart.lock
   card [--out dir]  Write heart-card.svg and heart-card.html
 
 Options:

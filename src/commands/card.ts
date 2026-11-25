@@ -82,7 +82,7 @@ function renderSvg(heart: Heart): string {
   ${heartGlyph(1100, 80, 70)}
   ${content.join("\n  ")}
   <text x="80" y="560" font-size="22" font-family="Georgia, serif" fill="#6b7280">Last frozen ${escapeXml(lastDate)}</text>
-  <text x="1120" y="560" text-anchor="end" font-size="20" font-family="Georgia, serif" fill="#9ca3af">heart.json</text>
+  <text x="1120" y="560" text-anchor="end" font-size="20" font-family="Georgia, serif" fill="#9ca3af">heart.lock</text>
 </svg>
 `;
 }
@@ -148,7 +148,7 @@ export async function runCard(args: string[]): Promise<number> {
     if (result.error === "No heart found.") {
       process.stderr.write("No heart found.\n");
     } else {
-      process.stderr.write(`Invalid heart.json:\n${result.error}\n`);
+      process.stderr.write(`Invalid heart.lock:\n${result.error}\n`);
     }
     return 1;
   }

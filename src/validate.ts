@@ -57,7 +57,7 @@ export function validate(value: unknown): string[] {
   const problems: string[] = [];
 
   if (!isRecord(value)) {
-    return ["heart.json must be an object"];
+    return ["heart.lock must be an object"];
   }
 
   const what = validateRequiredString(value, "what", problems);

@@ -4,7 +4,7 @@ import readline from "node:readline";
 import { validate, type Heart } from "./validate.js";
 
 export function heartPath(dir: string): string {
-  return path.join(dir, "heart.json");
+  return path.join(dir, "heart.lock");
 }
 
 export function readHeartFile(
@@ -20,7 +20,7 @@ export function readHeartFile(
   try {
     parsed = JSON.parse(text);
   } catch {
-    return { ok: false, error: "heart.json is not valid JSON." };
+    return { ok: false, error: "heart.lock is not valid JSON." };
   }
   const problems = validate(parsed);
   if (problems.length > 0) {
