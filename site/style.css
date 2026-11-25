@@ -1,0 +1,159 @@
+:root {
+  --bg: #fbfaf8;
+  --text: #1f1b19;
+  --muted: #6b6560;
+  --line: #e7e1db;
+  --accent: #b54a4a;
+  --card: #fffdfb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+
+header {
+  margin-bottom: 64px;
+}
+
+.glyph {
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 56px 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.entry {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.entry:last-child {
+  border-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.entry h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.entry h3 a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.entry h3 a:hover {
+  border-bottom-color: var(--text);
+}
+
+.status {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.status.frozen {
+  color: var(--accent);
+}
+
+dl {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+}
+
+dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 2px;
+}
+
+dd {
+  margin: 0;
+}
+
+.heartbeat {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.note {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.note a, footer a {
+  color: var(--text);
+}
+
+footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  main { padding: 48px 20px 72px; }
+  h1 { font-size: 2rem; }
+  .row { grid-template-columns: 56px 1fr; gap: 12px; }
+}
