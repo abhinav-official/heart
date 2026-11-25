@@ -9,274 +9,357 @@
 </head>
 <body>
   <main>
-    <header>
+    <header class="hero">
       <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 20.5C10.2 18.9 4 14 4 9.2C4 6.3 6.2 4 9 4C10.7 4 12.2 4.8 13 6C13.8 4.8 15.3 4 17 4C19.8 4 22 6.3 22 9.2C22 14 15.8 18.9 14 20.5L12 22L10 20.5Z" fill="#b54a4a"/>
       </svg>
+      <p class="eyebrow">The heart.lock directory</p>
       <h1>Beating</h1>
       <p class="intro">Projects that carry a heart.lock, and what their hearts say.</p>
     </header>
 
-    <section aria-labelledby="frozen">
-      <h2 id="frozen">Frozen by the maker</h2>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3><a href="https://github.com/abhinav-official/heart">heartlock</a></h3>
-          <span class="status frozen">frozen by the maker</span>
+    <section class="makers" aria-labelledby="frozen">
+      <div class="section-head">
+        <div>
+          <h2 id="frozen">Frozen by the maker</h2>
+          <p class="section-note">Real hearts, frozen by the people who build them.</p>
         </div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A tiny package that gives any project a heart.lock: what it is, why it exists, and whom it is for, in one line each.</dd></div>
-          <div class="row"><dt>Why</dt><dd>AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Makers building with AI who do not want their projects to drift.</dd></div>
-        </dl>
-        <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3><a href="https://github.com/abhinav-official/drop">drop</a></h3>
-          <span class="status frozen">frozen by the maker</span>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous project">&#8592;</button>
+          <button type="button" class="carousel-btn" data-carousel-next aria-label="Next project">&#8594;</button>
         </div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>Send a file with a 6-letter code.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Sharing a file should need no account and no waiting.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone with a file and a friend.</dd></div>
-        </dl>
-        <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
-      </article>
+      </div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track" data-carousel-track tabindex="0" aria-label="Maker projects">
+          <article class="carousel-card entry">
+            <div class="entry-header">
+              <h3><a href="https://github.com/abhinav-official/heart">heartlock</a></h3>
+              <span class="status frozen">frozen by the maker</span>
+            </div>
+            <dl>
+              <div class="row"><dt>What</dt><dd>A tiny package that gives any project a heart.lock: what it is, why it exists, and whom it is for, in one line each.</dd></div>
+              <div class="row"><dt>Why</dt><dd>AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it.</dd></div>
+              <div class="row"><dt>Whom</dt><dd>Makers building with AI who do not want their projects to drift.</dd></div>
+            </dl>
+            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+          </article>
 
-      <article class="entry">
-        <div class="entry-header">
-          <h3><a href="https://github.com/abhinav-official/zcurv">zcurv.com</a></h3>
-          <span class="status frozen">frozen by the maker</span>
-        </div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>Abhinav Jha's home on the internet: who he is, what he builds, and how to reach him.</dd></div>
-          <div class="row"><dt>Why</dt><dd>One address that is his, not a platform's, where his work stays findable whatever else changes.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone who wants to know what he builds: employers, collaborators, and the curious.</dd></div>
-        </dl>
-        <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
-      </article>
+          <article class="carousel-card entry">
+            <div class="entry-header">
+              <h3><a href="https://github.com/abhinav-official/drop">drop</a></h3>
+              <span class="status frozen">frozen by the maker</span>
+            </div>
+            <dl>
+              <div class="row"><dt>What</dt><dd>Send a file with a 6-letter code.</dd></div>
+              <div class="row"><dt>Why</dt><dd>Sharing a file should need no account and no waiting.</dd></div>
+              <div class="row"><dt>Whom</dt><dd>Anyone with a file and a friend.</dd></div>
+            </dl>
+            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+          </article>
 
-      <article class="entry">
-        <div class="entry-header">
-          <h3><a href="https://github.com/abhinav-official/content-engine">content-engine</a></h3>
-          <span class="status frozen">frozen by the maker</span>
+          <article class="carousel-card entry">
+            <div class="entry-header">
+              <h3><a href="https://github.com/abhinav-official/zcurv">zcurv.com</a></h3>
+              <span class="status frozen">frozen by the maker</span>
+            </div>
+            <dl>
+              <div class="row"><dt>What</dt><dd>Abhinav Jha's home on the internet: who he is, what he builds, and how to reach him.</dd></div>
+              <div class="row"><dt>Why</dt><dd>One address that is his, not a platform's, where his work stays findable whatever else changes.</dd></div>
+              <div class="row"><dt>Whom</dt><dd>Anyone who wants to know what he builds: employers, collaborators, and the curious.</dd></div>
+            </dl>
+            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+          </article>
+
+          <article class="carousel-card entry">
+            <div class="entry-header">
+              <h3><a href="https://github.com/abhinav-official/content-engine">content-engine</a></h3>
+              <span class="status frozen">frozen by the maker</span>
+            </div>
+            <dl>
+              <div class="row"><dt>What</dt><dd>One engine that makes and publishes every channel's videos: Interval and Mavi, a long and its Shorts every day.</dd></div>
+              <div class="row"><dt>Why</dt><dd>Two channels, one system, so a daily video never depends on a day's motivation.</dd></div>
+              <div class="row"><dt>Whom</dt><dd>Abhinav, the only operator; and through the channels, viewers who come for film essays and psychology.</dd></div>
+            </dl>
+            <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
+          </article>
         </div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>One engine that makes and publishes every channel's videos: Interval and Mavi, a long and its Shorts every day.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Two channels, one system, so a daily video never depends on a day's motivation.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Abhinav, the only operator; and through the channels, viewers who come for film essays and psychology.</dd></div>
-        </dl>
-        <p class="heartbeat">Heartbeat: last frozen 2026-11-25</p>
-      </article>
+        <div class="carousel-dots" data-carousel-dots aria-label="Carousel position"></div>
+      </div>
     </section>
 
-    <section aria-labelledby="examples">
-      <h2 id="examples">Examples</h2>
-      <p class="note">These are example hearts, written in the same format to show what a heart.lock could say. Each is clearly marked <strong>example</strong> until its makers freeze a real one.</p>
+    <section class="examples-band" aria-labelledby="examples">
+      <div class="examples-inner">
+        <h2 id="examples">Examples</h2>
+        <p class="note">These are example hearts, written in the same format to show what a heart.lock could say. Each is clearly marked <strong>example</strong> until its makers freeze a real one.</p>
+        <div class="examples-grid">
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/torvalds/linux">Linux</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>An open-source operating system kernel that runs on everything from phones to supercomputers.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Software should be free to study, change, and share, all the way down to the core.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Anyone who needs a foundation they can trust, inspect, and own.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/torvalds/linux">Linux</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>An open-source operating system kernel that runs on everything from phones to supercomputers.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Software should be free to study, change, and share, all the way down to the core.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone who needs a foundation they can trust, inspect, and own.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/git/git">Git</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A distributed version control system for tracking changes in files and coordinating work.</dd></div>
+            <div class="row"><dt>Why</dt><dd>People should be able to work together on code without losing history or trusting a central machine.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Anyone who makes things in files and needs to remember, compare, and collaborate.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/git/git">Git</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A distributed version control system for tracking changes in files and coordinating work.</dd></div>
-          <div class="row"><dt>Why</dt><dd>People should be able to work together on code without losing history or trusting a central machine.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone who makes things in files and needs to remember, compare, and collaborate.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/curl/curl">curl</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A command-line tool and library for transferring data with URLs.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Moving data across networks should be reliable, scriptable, and available everywhere.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers and systems that need to speak to the internet from the command line or from code.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/curl/curl">curl</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A command-line tool and library for transferring data with URLs.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Moving data across networks should be reliable, scriptable, and available everywhere.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers and systems that need to speak to the internet from the command line or from code.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/sqlite/sqlite">SQLite</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A small, self-contained SQL database engine that lives in a single file.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Reliable structured data should not require a server, setup, or maintenance.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers who need a database that just works, embedded wherever data lives.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/sqlite/sqlite">SQLite</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A small, self-contained SQL database engine that lives in a single file.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Reliable structured data should not require a server, setup, or maintenance.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers who need a database that just works, embedded wherever data lives.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/facebook/react">React</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A JavaScript library for building user interfaces from components.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Complex interfaces become manageable when the UI is a clear function of state.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers building interactive interfaces on the web and beyond.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/facebook/react">React</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A JavaScript library for building user interfaces from components.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Complex interfaces become manageable when the UI is a clear function of state.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers building interactive interfaces on the web and beyond.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/vuejs/core">Vue</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A progressive JavaScript framework for building web user interfaces.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Building for the web should feel approachable without giving up power.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers who want a framework that can start simple and grow with the project.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/vuejs/core">Vue</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A progressive JavaScript framework for building web user interfaces.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Building for the web should feel approachable without giving up power.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers who want a framework that can start simple and grow with the project.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/kubernetes/kubernetes">Kubernetes</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>An open-source system for automating deployment, scaling, and management of containerized applications.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Running software at scale should be declarative, resilient, and not tied to one machine.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Teams operating applications that need to run reliably across many machines.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/kubernetes/kubernetes">Kubernetes</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>An open-source system for automating deployment, scaling, and management of containerized applications.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Running software at scale should be declarative, resilient, and not tied to one machine.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Teams operating applications that need to run reliably across many machines.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/moby/moby">Docker</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A platform for packaging and running applications in containers.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Software should run the same way everywhere, from a laptop to production.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers and operators who want to ship applications without environment surprises.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/moby/moby">Docker</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A platform for packaging and running applications in containers.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Software should run the same way everywhere, from a laptop to production.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers and operators who want to ship applications without environment surprises.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/microsoft/vscode">VS Code</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A free, extensible code editor for building and debugging modern software.</dd></div>
+            <div class="row"><dt>Why</dt><dd>A developer's editor should be fast, capable, and shaped by the community that uses it.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers who want one editor that adapts to every language and workflow.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/microsoft/vscode">VS Code</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A free, extensible code editor for building and debugging modern software.</dd></div>
-          <div class="row"><dt>Why</dt><dd>A developer's editor should be fast, capable, and shaped by the community that uses it.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers who want one editor that adapts to every language and workflow.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/blender/blender">Blender</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A free, open-source 3D creation suite for modeling, animation, rendering, and more.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Professional creative tools should be available to everyone, not locked behind a price tag.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Artists, studios, and learners who want to create 3D work without permission.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/blender/blender">Blender</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A free, open-source 3D creation suite for modeling, animation, rendering, and more.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Professional creative tools should be available to everyone, not locked behind a price tag.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Artists, studios, and learners who want to create 3D work without permission.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/wikimedia/mediawiki">Wikipedia (MediaWiki)</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>The wiki platform that powers Wikipedia and other collaborative knowledge projects.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Human knowledge should be free for everyone to read, share, and improve.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Communities that want to collect and share knowledge in the open.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/wikimedia/mediawiki">Wikipedia (MediaWiki)</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>The wiki platform that powers Wikipedia and other collaborative knowledge projects.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Human knowledge should be free for everyone to read, share, and improve.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Communities that want to collect and share knowledge in the open.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/mozilla/gecko-dev">Firefox</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A free, open-source web browser built by Mozilla.</dd></div>
+            <div class="row"><dt>Why</dt><dd>The web should stay open, private, and not controlled by a single company.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>People who want to browse the web on their own terms.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/mozilla/gecko-dev">Firefox</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A free, open-source web browser built by Mozilla.</dd></div>
-          <div class="row"><dt>Why</dt><dd>The web should stay open, private, and not controlled by a single company.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>People who want to browse the web on their own terms.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/postgres/postgres">PostgreSQL</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>An advanced open-source relational database system.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Data deserves a store that is correct, extensible, and built to last decades.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers and organizations who need a dependable database they can trust with important data.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/postgres/postgres">PostgreSQL</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>An advanced open-source relational database system.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Data deserves a store that is correct, extensible, and built to last decades.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers and organizations who need a dependable database they can trust with important data.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/redis/redis">Redis</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>An in-memory data structure store used as a database, cache, and message broker.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Some data needs to be read and written faster than a disk can go.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers building systems that need fast, simple access to shared state.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/redis/redis">Redis</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>An in-memory data structure store used as a database, cache, and message broker.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Some data needs to be read and written faster than a disk can go.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers building systems that need fast, simple access to shared state.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/nodejs/node">Node.js</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A JavaScript runtime built on Chrome's V8 engine for running code outside the browser.</dd></div>
+            <div class="row"><dt>Why</dt><dd>JavaScript should be useful beyond the page, for servers, tools, and scripts.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers who want to build networked software with JavaScript.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/nodejs/node">Node.js</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A JavaScript runtime built on Chrome's V8 engine for running code outside the browser.</dd></div>
-          <div class="row"><dt>Why</dt><dd>JavaScript should be useful beyond the page, for servers, tools, and scripts.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers who want to build networked software with JavaScript.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/python/cpython">Python</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A programming language designed for readability and broad usefulness.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Programming should be clear enough that humans can read it, not just machines.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Anyone who wants to turn ideas into working programs, from beginners to experts.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/python/cpython">Python</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A programming language designed for readability and broad usefulness.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Programming should be clear enough that humans can read it, not just machines.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone who wants to turn ideas into working programs, from beginners to experts.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/rust-lang/rust">Rust</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A programming language for building fast, reliable software.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Systems software should be both performant and safe, without trading one for the other.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Developers who need low-level control without low-level memory bugs.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/rust-lang/rust">Rust</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A programming language for building fast, reliable software.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Systems software should be both performant and safe, without trading one for the other.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Developers who need low-level control without low-level memory bugs.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/golang/go">Go</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A programming language built for simple, reliable, and efficient software.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Building and maintaining large software systems should stay straightforward.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Teams building networked services and tools that need to be easy to read and operate.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/golang/go">Go</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A programming language built for simple, reliable, and efficient software.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Building and maintaining large software systems should stay straightforward.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Teams building networked services and tools that need to be easy to read and operate.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/WordPress/WordPress">WordPress</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>An open-source content management system for publishing on the web.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Publishing on the internet should be possible for anyone, not just developers.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>People and organizations who want to own and publish their own website.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/WordPress/WordPress">WordPress</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>An open-source content management system for publishing on the web.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Publishing on the internet should be possible for anyone, not just developers.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>People and organizations who want to own and publish their own website.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/FFmpeg/FFmpeg">ffmpeg</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A complete, cross-platform toolkit for recording, converting, and streaming audio and video.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Working with media should not be blocked by formats, codecs, or proprietary tools.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Anyone who needs to process audio or video, from hobbyists to production systems.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/FFmpeg/FFmpeg">ffmpeg</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A complete, cross-platform toolkit for recording, converting, and streaming audio and video.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Working with media should not be blocked by formats, codecs, or proprietary tools.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone who needs to process audio or video, from hobbyists to production systems.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/obsproject/obs-studio">OBS Studio</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>Free, open-source software for video recording and live streaming.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Broadcasting yourself to the world should not require expensive or closed tools.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Creators, educators, and anyone who wants to record or stream video.</dd></div>
+          </dl>
+        </article>
 
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/obsproject/obs-studio">OBS Studio</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>Free, open-source software for video recording and live streaming.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Broadcasting yourself to the world should not require expensive or closed tools.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Creators, educators, and anyone who wants to record or stream video.</dd></div>
-        </dl>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header"><h3><a href="https://github.com/signalapp/Signal-Android">Signal</a></h3><span class="status">example</span></div>
-        <dl>
-          <div class="row"><dt>What</dt><dd>A private messaging app with end-to-end encryption.</dd></div>
-          <div class="row"><dt>Why</dt><dd>Private conversation should be the default, not a premium feature.</dd></div>
-          <div class="row"><dt>Whom</dt><dd>Anyone who wants to communicate without being overheard.</dd></div>
-        </dl>
-      </article>
+        <article class="entry example-entry">
+          <div class="entry-header">
+            <h3><a href="https://github.com/signalapp/Signal-Android">Signal</a></h3>
+            <span class="status">example</span>
+          </div>
+          <dl>
+            <div class="row"><dt>What</dt><dd>A private messaging app with end-to-end encryption.</dd></div>
+            <div class="row"><dt>Why</dt><dd>Private conversation should be the default, not a premium feature.</dd></div>
+            <div class="row"><dt>Whom</dt><dd>Anyone who wants to communicate without being overheard.</dd></div>
+          </dl>
+        </article>
+        </div>
+      </div>
     </section>
 
-    <section aria-labelledby="claim">
+    <section class="cta-section" aria-labelledby="claim">
       <h2 id="claim">Claim your listing</h2>
       <p class="note">1. Add a <code>heart.lock</code> to your repo and freeze it.</p>
       <p class="note">2. Open a pull request against the <a href="https://github.com/abhinav-official/heart">heartlock repo</a> adding your entry to <code>site/beating.json</code>.</p>
@@ -285,14 +368,17 @@
       <p class="note">Claiming an example works the same way: the PR changes that entry's status to <code>maker</code> with the true freeze date.</p>
     </section>
 
-    <section aria-labelledby="give">
+    <section class="cta-section give" aria-labelledby="give">
       <h2 id="give">Give your project a heart</h2>
-      <p class="note">Add a <code>heart.lock</code> to any repo, in any language. Read the <a href="https://github.com/abhinav-official/heart/blob/main/README.md">README</a> and <a href="https://github.com/abhinav-official/heart/blob/main/SPEC.md">SPEC.md</a> to get started.</p>
+      <p class="note">Add a <code>heart.lock</code> to any repo, in any language. The format is simple, frozen by humans, and readable by every AI.</p>
+      <a class="btn-red" href="https://github.com/abhinav-official/heart/blob/main/README.md">Read the README</a>
+      <p class="note spec-link">Or start with the <a href="https://github.com/abhinav-official/heart/blob/main/SPEC.md">SPEC.md</a>.</p>
     </section>
 
     <footer>
       <p>Beating is part of <a href="https://github.com/abhinav-official/heart">heartlock</a>.</p>
     </footer>
   </main>
+  <script src="carousel.js"></script>
 </body>
 </html>
