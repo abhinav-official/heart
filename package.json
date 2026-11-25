@@ -3,6 +3,11 @@
   "version": "0.1.1",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinav-official/heart.git"
+  },
+  "homepage": "https://heart.zcurv.com",
   "bin": {
     "heart": "dist/cli.js"
   },
