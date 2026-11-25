@@ -9,5 +9,10 @@
       "why": "AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it.",
       "note": "First freeze."
     }
-  ]
+  ],
+  "ai": {
+    "edit_permission": "denied",
+    "reason": "This file is the project's frozen heart: what it is, why it exists, and whom it is for. Only a human may change it, by hand, through a freeze (heart freeze).",
+    "instruction": "Read the what, why and whom above before working on this project. If the work in front of you does not serve the why, say so before doing it."
+  }
 }
