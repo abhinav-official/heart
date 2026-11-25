@@ -18,9 +18,22 @@ export async function runFreeze(_args: string[]): Promise<number> {
   const prompter = createPrompter();
   try {
     const newWhy = await prompter.askNonEmpty("New why (one line): ");
+    if (newWhy === null) {
+      process.stderr.write("Freeze stopped: no input. Nothing was written.\n");
+      return 1;
+    }
     const note = await prompter.askNonEmpty("Why did it change? (one line): ");
+    if (note === null) {
+      process.stderr.write("Freeze stopped: no input. Nothing was written.\n");
+      return 1;
+    }
     process.stdout.write(`New why: ${newWhy}\n`);
-    const confirm = (await prompter.ask("Freeze it? (y/n) ")).trim().toLowerCase();
+    const confirmAnswer = await prompter.ask("Freeze it? (y/n) ");
+    if (confirmAnswer === null) {
+      process.stderr.write("Freeze stopped: no input. Nothing was written.\n");
+      return 1;
+    }
+    const confirm = confirmAnswer.trim().toLowerCase();
 
     if (confirm !== "y" && confirm !== "yes") {
       process.stdout.write("No changes made.\n");

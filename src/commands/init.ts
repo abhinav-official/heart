@@ -13,8 +13,20 @@ export async function runInit(_args: string[]): Promise<number> {
   const prompter = createPrompter();
   try {
     const what = await prompter.askNonEmpty("What is this project? ");
+    if (what === null) {
+      process.stderr.write("Init stopped: no input. Nothing was written.\n");
+      return 1;
+    }
     const why = await prompter.askNonEmpty("Why does it exist? ");
+    if (why === null) {
+      process.stderr.write("Init stopped: no input. Nothing was written.\n");
+      return 1;
+    }
     const whom = await prompter.askNonEmpty("Whom is it for? ");
+    if (whom === null) {
+      process.stderr.write("Init stopped: no input. Nothing was written.\n");
+      return 1;
+    }
 
     const now = new Date().toISOString();
     const heart = {

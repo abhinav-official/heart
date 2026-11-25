@@ -55,8 +55,8 @@ export function daysSince(iso: string, now: Date = new Date()): number {
 }
 
 export interface Prompter {
-  ask(question: string): Promise<string>;
-  askNonEmpty(question: string): Promise<string>;
+  ask(question: string): Promise<string | null>;
+  askNonEmpty(question: string): Promise<string | null>;
   close(): void;
 }
 
@@ -66,7 +66,7 @@ export function createPrompter(
 ): Prompter {
   const rl = readline.createInterface({ input, crlfDelay: Infinity });
   const lines: string[] = [];
-  let waiting: ((line: string) => void) | null = null;
+  let waiting: ((line: string | null) => void) | null = null;
   let ended = false;
 
   rl.on("line", (line) => {
@@ -83,26 +83,27 @@ export function createPrompter(
     if (waiting) {
       const resolve = waiting;
       waiting = null;
-      resolve("");
+      resolve(null);
     }
   });
 
-  function nextLine(): Promise<string> {
+  function nextLine(): Promise<string | null> {
     if (lines.length > 0) return Promise.resolve(lines.shift() as string);
-    if (ended) return Promise.resolve("");
+    if (ended) return Promise.resolve(null);
     return new Promise((resolve) => {
       waiting = resolve;
     });
   }
 
-  async function ask(question: string): Promise<string> {
+  async function ask(question: string): Promise<string | null> {
     output.write(question);
     return nextLine();
   }
 
-  async function askNonEmpty(question: string): Promise<string> {
+  async function askNonEmpty(question: string): Promise<string | null> {
     for (;;) {
       const answer = await ask(question);
+      if (answer === null) return null;
       const trimmed = answer.trim();
       if (trimmed.length === 0) {
         output.write("Answer must be a non-empty single line.\n");

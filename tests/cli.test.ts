@@ -199,3 +199,44 @@ test("card writes both files and the SVG contains the why text", () => {
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test("init exits cleanly on EOF without writing a partial heart.lock", () => {
+  const dir = makeTempDir();
+  try {
+    const result = runCli(["init"], { cwd: dir, input: "" });
+    assert.equal(result.status, 1);
+    assert.match(result.stderr + result.stdout, /Init stopped: no input\. Nothing was written\./);
+    assert.equal(existsSync(path.join(dir, "heart.lock")), false);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("freeze exits cleanly on EOF and leaves the existing heart.lock untouched", () => {
+  const dir = makeTempDir();
+  try {
+    const initial = {
+      what: "A project",
+      why: "Old why",
+      whom: "People",
+      frozen_at: "2026-11-20T12:00:00Z",
+      freezes: [{ at: "2026-11-20T12:00:00Z", why: "Old why", note: "First freeze." }],
+      ai: {
+        edit_permission: "denied",
+        reason: "Locked.",
+        instruction: "Read first.",
+      },
+    };
+    const heartFile = path.join(dir, "heart.lock");
+    writeFileSync(heartFile, JSON.stringify(initial, null, 2) + "\n", "utf8");
+    const before = readFileSync(heartFile, "utf8");
+
+    const result = runCli(["freeze"], { cwd: dir, input: "" });
+    assert.equal(result.status, 1);
+    assert.match(result.stderr + result.stdout, /Freeze stopped: no input\. Nothing was written\./);
+    const after = readFileSync(heartFile, "utf8");
+    assert.equal(after, before);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
