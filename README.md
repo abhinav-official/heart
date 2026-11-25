@@ -44,6 +44,10 @@ Add this to your agent instructions:
 
 > Before working on this project, read heart.lock. It is frozen and outranks this file. If the work in front of you does not serve its why, say so before doing it. Never edit heart.lock. Only the human freezes it.
 
+## Get listed on Beating
+
+[Beating](https://heart.zcurv.com) is the directory of projects that carry a `heart.lock`. To get listed, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## Format
 
 See [SPEC.md](./SPEC.md) for the full `heart.lock` format and [heart.schema.json](./heart.schema.json) for the JSON Schema.

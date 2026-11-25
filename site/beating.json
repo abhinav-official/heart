@@ -1,0 +1,236 @@
+[
+  {
+    "name": "heartlock",
+    "repo": "https://github.com/abhinav-official/heart",
+    "what": "A tiny package that gives any project a heart.lock: what it is, why it exists, and whom it is for, in one line each.",
+    "why": "AI, tools and teams keep changing; the heart should not. The why stays frozen in the repo where every human and every AI can read it.",
+    "whom": "Makers building with AI who do not want their projects to drift.",
+    "last_frozen": "2026-11-25",
+    "status": "maker"
+  },
+  {
+    "name": "drop",
+    "repo": "https://github.com/abhinav-official/drop",
+    "what": "Send a file with a 6-letter code.",
+    "why": "Sharing a file should need no account and no waiting.",
+    "whom": "Anyone with a file and a friend.",
+    "last_frozen": "2026-11-25",
+    "status": "maker"
+  },
+  {
+    "name": "zcurv.com",
+    "repo": "https://github.com/abhinav-official/zcurv",
+    "what": "Abhinav Jha's home on the internet: who he is, what he builds, and how to reach him.",
+    "why": "One address that is his, not a platform's, where his work stays findable whatever else changes.",
+    "whom": "Anyone who wants to know what he builds: employers, collaborators, and the curious.",
+    "last_frozen": "2026-11-25",
+    "status": "maker"
+  },
+  {
+    "name": "content-engine",
+    "repo": "https://github.com/abhinav-official/content-engine",
+    "what": "One engine that makes and publishes every channel's videos: Interval and Mavi, a long and its Shorts every day.",
+    "why": "Two channels, one system, so a daily video never depends on a day's motivation.",
+    "whom": "Abhinav, the only operator; and through the channels, viewers who come for film essays and psychology.",
+    "last_frozen": "2026-11-25",
+    "status": "maker"
+  },
+  {
+    "name": "Linux",
+    "repo": "https://github.com/torvalds/linux",
+    "what": "An open-source operating system kernel that runs on everything from phones to supercomputers.",
+    "why": "Software should be free to study, change, and share, all the way down to the core.",
+    "whom": "Anyone who needs a foundation they can trust, inspect, and own.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Git",
+    "repo": "https://github.com/git/git",
+    "what": "A distributed version control system for tracking changes in files and coordinating work.",
+    "why": "People should be able to work together on code without losing history or trusting a central machine.",
+    "whom": "Anyone who makes things in files and needs to remember, compare, and collaborate.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "curl",
+    "repo": "https://github.com/curl/curl",
+    "what": "A command-line tool and library for transferring data with URLs.",
+    "why": "Moving data across networks should be reliable, scriptable, and available everywhere.",
+    "whom": "Developers and systems that need to speak to the internet from the command line or from code.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "SQLite",
+    "repo": "https://github.com/sqlite/sqlite",
+    "what": "A small, self-contained SQL database engine that lives in a single file.",
+    "why": "Reliable structured data should not require a server, setup, or maintenance.",
+    "whom": "Developers who need a database that just works, embedded wherever data lives.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "React",
+    "repo": "https://github.com/facebook/react",
+    "what": "A JavaScript library for building user interfaces from components.",
+    "why": "Complex interfaces become manageable when the UI is a clear function of state.",
+    "whom": "Developers building interactive interfaces on the web and beyond.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Vue",
+    "repo": "https://github.com/vuejs/core",
+    "what": "A progressive JavaScript framework for building web user interfaces.",
+    "why": "Building for the web should feel approachable without giving up power.",
+    "whom": "Developers who want a framework that can start simple and grow with the project.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Kubernetes",
+    "repo": "https://github.com/kubernetes/kubernetes",
+    "what": "An open-source system for automating deployment, scaling, and management of containerized applications.",
+    "why": "Running software at scale should be declarative, resilient, and not tied to one machine.",
+    "whom": "Teams operating applications that need to run reliably across many machines.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Docker",
+    "repo": "https://github.com/moby/moby",
+    "what": "A platform for packaging and running applications in containers.",
+    "why": "Software should run the same way everywhere, from a laptop to production.",
+    "whom": "Developers and operators who want to ship applications without environment surprises.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "VS Code",
+    "repo": "https://github.com/microsoft/vscode",
+    "what": "A free, extensible code editor for building and debugging modern software.",
+    "why": "A developer's editor should be fast, capable, and shaped by the community that uses it.",
+    "whom": "Developers who want one editor that adapts to every language and workflow.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Blender",
+    "repo": "https://github.com/blender/blender",
+    "what": "A free, open-source 3D creation suite for modeling, animation, rendering, and more.",
+    "why": "Professional creative tools should be available to everyone, not locked behind a price tag.",
+    "whom": "Artists, studios, and learners who want to create 3D work without permission.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Wikipedia (MediaWiki)",
+    "repo": "https://github.com/wikimedia/mediawiki",
+    "what": "The wiki platform that powers Wikipedia and other collaborative knowledge projects.",
+    "why": "Human knowledge should be free for everyone to read, share, and improve.",
+    "whom": "Communities that want to collect and share knowledge in the open.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Firefox",
+    "repo": "https://github.com/mozilla/gecko-dev",
+    "what": "A free, open-source web browser built by Mozilla.",
+    "why": "The web should stay open, private, and not controlled by a single company.",
+    "whom": "People who want to browse the web on their own terms.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "PostgreSQL",
+    "repo": "https://github.com/postgres/postgres",
+    "what": "An advanced open-source relational database system.",
+    "why": "Data deserves a store that is correct, extensible, and built to last decades.",
+    "whom": "Developers and organizations who need a dependable database they can trust with important data.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Redis",
+    "repo": "https://github.com/redis/redis",
+    "what": "An in-memory data structure store used as a database, cache, and message broker.",
+    "why": "Some data needs to be read and written faster than a disk can go.",
+    "whom": "Developers building systems that need fast, simple access to shared state.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Node.js",
+    "repo": "https://github.com/nodejs/node",
+    "what": "A JavaScript runtime built on Chrome's V8 engine for running code outside the browser.",
+    "why": "JavaScript should be useful beyond the page, for servers, tools, and scripts.",
+    "whom": "Developers who want to build networked software with JavaScript.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Python",
+    "repo": "https://github.com/python/cpython",
+    "what": "A programming language designed for readability and broad usefulness.",
+    "why": "Programming should be clear enough that humans can read it, not just machines.",
+    "whom": "Anyone who wants to turn ideas into working programs, from beginners to experts.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Rust",
+    "repo": "https://github.com/rust-lang/rust",
+    "what": "A programming language for building fast, reliable software.",
+    "why": "Systems software should be both performant and safe, without trading one for the other.",
+    "whom": "Developers who need low-level control without low-level memory bugs.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Go",
+    "repo": "https://github.com/golang/go",
+    "what": "A programming language built for simple, reliable, and efficient software.",
+    "why": "Building and maintaining large software systems should stay straightforward.",
+    "whom": "Teams building networked services and tools that need to be easy to read and operate.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "WordPress",
+    "repo": "https://github.com/WordPress/WordPress",
+    "what": "An open-source content management system for publishing on the web.",
+    "why": "Publishing on the internet should be possible for anyone, not just developers.",
+    "whom": "People and organizations who want to own and publish their own website.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "ffmpeg",
+    "repo": "https://github.com/FFmpeg/FFmpeg",
+    "what": "A complete, cross-platform toolkit for recording, converting, and streaming audio and video.",
+    "why": "Working with media should not be blocked by formats, codecs, or proprietary tools.",
+    "whom": "Anyone who needs to process audio or video, from hobbyists to production systems.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "OBS Studio",
+    "repo": "https://github.com/obsproject/obs-studio",
+    "what": "Free, open-source software for video recording and live streaming.",
+    "why": "Broadcasting yourself to the world should not require expensive or closed tools.",
+    "whom": "Creators, educators, and anyone who wants to record or stream video.",
+    "last_frozen": null,
+    "status": "example"
+  },
+  {
+    "name": "Signal",
+    "repo": "https://github.com/signalapp/Signal-Android",
+    "what": "A private messaging app with end-to-end encryption.",
+    "why": "Private conversation should be the default, not a premium feature.",
+    "whom": "Anyone who wants to communicate without being overheard.",
+    "last_frozen": null,
+    "status": "example"
+  }
+]
