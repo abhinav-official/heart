@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Heart card">
+  <rect width="1200" height="630" fill="#fffaf8"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#f0d7d7" stroke-width="2"/>
+  <path d="M 0 -0.35 C -0.1 -0.55 -0.5 -0.55 -0.5 -0.2 C -0.5 0.1 -0.2 0.35 0 0.55 C 0.2 0.35 0.5 0.1 0.5 -0.2 C 0.5 -0.55 0.1 -0.55 0 -0.35 Z" fill="#e25555" transform="translate(1100 80) scale(70)"/>
+  <text x="80" y="120" font-size="20" font-family="Georgia, serif" fill="#e25555" letter-spacing="2">WHAT</text>
+  <text x="80" y="156" font-size="34" font-family="Georgia, serif" fill="#1f2937">A tiny package that gives any project a heart.lock:</text>
+  <text x="80" y="200" font-size="34" font-family="Georgia, serif" fill="#1f2937">what it is, why it exists, and whom it is for, in</text>
+  <text x="80" y="244" font-size="34" font-family="Georgia, serif" fill="#1f2937">one line each.</text>
+  <text x="80" y="312" font-size="20" font-family="Georgia, serif" fill="#e25555" letter-spacing="2">WHY</text>
+  <text x="80" y="348" font-size="34" font-family="Georgia, serif" fill="#1f2937">AI, tools and teams keep changing; the heart should</text>
+  <text x="80" y="392" font-size="34" font-family="Georgia, serif" fill="#1f2937">not. The why stays frozen in the repo where every</text>
+  <text x="80" y="436" font-size="34" font-family="Georgia, serif" fill="#1f2937">human and every AI can read it.</text>
+  <text x="80" y="504" font-size="20" font-family="Georgia, serif" fill="#e25555" letter-spacing="2">WHOM</text>
+  <text x="80" y="540" font-size="34" font-family="Georgia, serif" fill="#1f2937">Makers building with AI who do not want their</text>
+  <text x="80" y="584" font-size="34" font-family="Georgia, serif" fill="#1f2937">projects to drift.</text>
+  <text x="80" y="560" font-size="22" font-family="Georgia, serif" fill="#6b7280">Last frozen 2026-11-25</text>
+  <text x="1120" y="560" text-anchor="end" font-size="20" font-family="Georgia, serif" fill="#9ca3af">heart.lock</text>
+</svg>
